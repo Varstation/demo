@@ -13,10 +13,7 @@ Results [Good](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/good_se
 mkdir dados
 mkdir dados/fastq
 mkdir dados/bwa
-mkdir dados/picard
 mkdir dados/fastqc
-mkdir dados/bedtools
-mkdir dados/annovar
 mkdir dados/freebayes
 mkdir dados/gatk
 ```
