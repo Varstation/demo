@@ -1,12 +1,14 @@
-# From FASTQ to VCF
+# From FASTQ to VCF file
 This is a very short practical demo from the fastq files to VCF files.
 Some commands continue on the next line. These commands have backslashes \ in the end of the line to indicate that the newline character (not shown) should be ignored. You should be able to copy (Ctrl+c) the full length command and then paste it in the console window. An alternative is to copy one line at time, leaving the backslashes out. In a script file, newline characters have to escaped with backslashes.
 
-# Análise de Qualidade das Sequências com o FastQC
-Manual do [FastQC](https://dnacore.missouri.edu/PDF/FastQC_Manual.pdf).</br>
-Exemplo de resultado [BOM](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/good_sequence_short_fastqc.html) e [RUIM](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/bad_sequence_fastqc.html).</br>
+# What is FastQC
+Modern high throughput sequencers can generate tens of millions of sequences in a single run. Before analysing this sequence to draw biological conclusions you should always perform some simple quality control checks to ensure that the raw data looks good and there are no problems or biases in your data which may affect how you can usefully use it.
 
-### Criar a estrutura de diretórios para trabalhar;
+Manual [FastQC](https://dnacore.missouri.edu/PDF/FastQC_Manual.pdf).</br>
+Results [Good](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/good_sequence_short_fastqc.html) and [Bad](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/bad_sequence_fastqc.html).</br>
+
+### Create a directory structure to work
 ```
 mkdir dados
 mkdir dados/fastq
@@ -25,15 +27,12 @@ mkdir dados/gatk
 time cp /bioinfo/data/fastq/003.fastq.gz dados/fastq/
 ```
 
-## Listar os arquivos copiados;
-```
-ls -lh dados/fastq/*
-```
 
-## Executar o FASTQC para avaliar a qualidade das sequencias produzidas;
+## Running the FASTQC analyses 
 ```
 time fastqc -o dados/fastqc dados/fastq/003.fastq.gz
 ```
+
 ## Lets go to your home directory
 
 ```
@@ -83,4 +82,7 @@ time /bioinfo/app/gatk/gatk-4.1.2.0/gatk HaplotypeCaller -R /bioinfo/referencia/
 ```
 
 ## References
+https://github.com/lh3/bwa
+https://github.com/broadinstitute/gatk
+https://github.com/ekg/freebayes
 
