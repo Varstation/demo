@@ -79,7 +79,7 @@ time /bioinfo/app/gatk/gatk-4.1.2.0/gatk HaplotypeCaller -R /bioinfo/referencia/
 ```
 
 ## References
-https://github.com/lh3/bwa
-https://github.com/broadinstitute/gatk
-https://github.com/ekg/freebayes
+https://github.com/lh3/bwa </br>
+https://github.com/broadinstitute/gatk </br>
+https://github.com/ekg/freebayes </br>
 
