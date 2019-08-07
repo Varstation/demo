@@ -73,8 +73,14 @@ time /bioinfo/app/freebayes/bin/freebayes -f /bioinfo/referencia/hg19/chr1_13_17
 >dados/freebayes/AMOSTRA01_S1_sorted.vcf
 ```
 
-## Chamada de variantes com o GATK;
+## Variant-only calling on DNAseq
+The HaplotypeCaller is capable of calling SNPs and indels simultaneously via local de-novo assembly of haplotypes in an active region. In other words, whenever the program encounters a region showing signs of variation, it discards the existing mapping information and completely reassembles the reads in that region. This allows the HaplotypeCaller to be more accurate when calling regions that are traditionally difficult to call, for example when they contain different types of variants close to each other.
+
 ```
 time /bioinfo/app/gatk/gatk-4.1.2.0/gatk HaplotypeCaller -R /bioinfo/referencia/hg19/chr1_13_17.fa \
 -I dados/bwa/AMOSTRA01_S1_sorted.bam \
 -O dados/gatk/AMOSTRA01_S1_sorted.vcf
+```
+
+## References
+
