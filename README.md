@@ -51,7 +51,7 @@ time samtools index dados/bwa/AMOSTRA01_S1_sorted.bam
 ```
 
 
-## Call variants assuming a diploid sample and require at least 0.3 fraction of observations supporting an alternate allele and also 15 supporting observations to consider a variant;
+## Call variants assuming a diploid sample and require at least 0.3 (30%) fraction of observations supporting an alternate allele and also 15 supporting observations to consider a variant;
 
 ```
 # -F --min-alternate-fraction N
