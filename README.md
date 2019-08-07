@@ -18,8 +18,7 @@ mkdir dados/freebayes
 mkdir dados/gatk
 ```
 
-
-## Copiar os FASTQ para sua pasta de análise;
+## Get the FASTQ data
 ```
 time cp /bioinfo/data/fastq/003.fastq.gz dados/fastq/
 ```
